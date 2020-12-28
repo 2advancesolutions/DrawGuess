@@ -14,6 +14,8 @@ async function bootstrap() {
   app.setGlobalPrefix(globalPrefix);
   app.enableCors();
   // const port = process.env.PORT || 3333;
+  // websocket issue need change port
+  // https://stackoverflow.com/questions/11653237/socket-io-failed-to-load-resource
   const port = 3001 || 3333;
   await app.listen(port, () => {
     Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
