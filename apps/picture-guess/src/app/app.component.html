@@ -1,8 +1,16 @@
-<div style="text-align: center">
-  <h1>Welcome to picture-guess!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
+<div>
+  There are currently <strong>{{users}}</strong> users online. Start chatting!
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+<ul>
+
+<li *ngFor="let message of messages">
+{{message}}
+</li>
+
+</ul>
+
+<div>
+  <button class="button" (click)="addChat()">Send Message</button>
+</div>
+
+
