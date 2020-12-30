@@ -187,6 +187,35 @@
           }
         }
       }
+    },
+    "canvas-whiteboard-canvas": {
+      "projectType": "library",
+      "root": "libs/canvas-whiteboard/canvas",
+      "sourceRoot": "libs/canvas-whiteboard/canvas/src",
+      "prefix": "angular",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/canvas-whiteboard/canvas/tsconfig.lib.json",
+              "libs/canvas-whiteboard/canvas/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/canvas-whiteboard/canvas/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/canvas-whiteboard/canvas"],
+          "options": {
+            "jestConfig": "libs/canvas-whiteboard/canvas/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

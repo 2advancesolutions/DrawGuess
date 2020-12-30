@@ -10,12 +10,12 @@ export class ChatService {
 
   }
 
-  sendChat(message) {
-    this.socket.emit('chat', message);
+  sendMessage(message) {
+    this.socket.emit('message', message);
   }
 
-  receiveChat() {
-    return this.socket.fromEvent('chat');
+  receivedMessage() {
+    return this.socket.fromEvent('message');
   }
 
   getUsers() {

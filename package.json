@@ -43,6 +43,7 @@
     "@nestjs/platform-socket.io": "^7.6.4",
     "@nestjs/websockets": "^7.6.4",
     "@nrwl/angular": "11.0.18",
+    "ng2-canvas-whiteboard": "^4.0.2",
     "ngx-socket-io": "^3.2.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.5",
