@@ -35,6 +35,12 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "canvas-whiteboard-canvas": {
+      "tags": []
+    },
+    "ui-canvas": {
+      "tags": []
     }
   }
 }
