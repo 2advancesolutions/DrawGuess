@@ -18,7 +18,8 @@
       "@angular/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@angular/canvas-whiteboard/canvas": [
         "libs/canvas-whiteboard/canvas/src/index.ts"
-      ]
+      ],
+      "@angular/ui-canvas": ["libs/ui-canvas/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

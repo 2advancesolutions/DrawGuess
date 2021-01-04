@@ -20,8 +20,14 @@
               "apps/picture-guess/src/favicon.ico",
               "apps/picture-guess/src/assets"
             ],
-            "styles": ["apps/picture-guess/src/styles.scss"],
-            "scripts": []
+            "styles": [
+              "apps/picture-guess/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -216,10 +222,37 @@
           }
         }
       }
+    },
+    "ui-canvas": {
+      "projectType": "library",
+      "root": "libs/ui-canvas",
+      "sourceRoot": "libs/ui-canvas/src",
+      "prefix": "angular",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-canvas/tsconfig.lib.json",
+              "libs/ui-canvas/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-canvas/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-canvas"],
+          "options": {
+            "jestConfig": "libs/ui-canvas/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "b80a5c93-8e07-4f00-a121-9a6801d92a93"
   },
   "schematics": {
     "@nrwl/workspace": {

@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/picture-guess',
     '<rootDir>/apps/api',
     '<rootDir>/libs/canvas-whiteboard/canvas',
+    '<rootDir>/libs/ui-canvas',
   ],
 };
